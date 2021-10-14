@@ -40,13 +40,13 @@ class KeypadSolution {
                 + abs(kp.keypad[a][1] - kp.keypad[b][1]);
     }
 
-    public static void main(String[] args) {
-        char x = (char) ('0' + 3);
-        System.out.println(x);
-
-        Keypad kp = new Keypad();
-        kp.printKeypad();
-    }
+//    public static void main(String[] args) {
+//        char x = (char) ('0' + 3);
+//        System.out.println(x);
+//
+//        Keypad kp = new Keypad();
+//        kp.printKeypad();
+//    }
 }
 
 class Keypad {
