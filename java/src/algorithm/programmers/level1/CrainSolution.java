@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.programmers.level1;
 
 import java.util.ArrayList;
 import java.util.Stack;

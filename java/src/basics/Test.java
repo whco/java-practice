@@ -1,15 +1,14 @@
 package basics;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Stack;
+
+import static java.lang.Math.max;
 
 public class Test {
     public static void main(String[] args) {
-        System.out.println("test");
-        ArrayList<Stack<Integer>> s = new ArrayList<>(10);
-        for (int i = 0; i < 10; i++) {
-            s.add(new Stack<Integer>());
-        }
-        System.out.println(s.size());
+        boolean[] b = new boolean[3];
+        System.out.println(b[2]);
     }
 }
