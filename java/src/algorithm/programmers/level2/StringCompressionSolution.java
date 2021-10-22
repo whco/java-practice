@@ -44,3 +44,30 @@ class StringCompressionSolution {
 //
 //    }
 }
+
+class StringCompressionSolutionRecursive {
+    public int solution(String s) {
+        int answer = s.length();
+        for (int i = 1; i < s.length() / 2; i++) {
+            int len = getSplitedLength(s, i, 1).length();
+            answer = len < answer ? len : answer;
+        }
+        return answer;
+    }
+
+    public String getSplitedLength(String s, int n, int repeat) {
+        if(s.length() < n) return s;
+        String result = "";
+        String preString = s.substring(0, n);
+        String postString = s.substring(n);
+
+        if (!postString.startsWith(preString)) {
+            if (repeat == 1) {
+                return result += preString + getSplitedLength(postString, n, 1);
+            } else {
+                return result += repeat + preString + getSplitedLength(postString, n, 1);
+            }
+        }
+        return result += getSplitedLength(postString, n, repeat + 1);
+    }
+}

@@ -18,9 +18,20 @@ public class Test {
 //        for (int i = 2; i <= 10; i++) {
 //            System.out.println(Integer.parseInt("435", i));
 //        }
-        System.out.println(Integer.parseInt("32",4));
+//        System.out.println(Integer.parseInt("32",4));
+//
+//        int[] arr = {1, 3, 2};
+//        System.out.println("aabbaccc".length());
 
-        int[] arr = {1, 3, 2};
-        System.out.println("aabbaccc".length());
+//        Set<Integer> set = new HashSet<>();
+//        String s = "abcabc";
+//        System.out.println(s.startsWith("abc"));
+        System.out.println(plusReturn(5));
+
+    }
+
+    public static int plusReturn(int n) {
+        int x = 3;
+        return x += n;
     }
 }
