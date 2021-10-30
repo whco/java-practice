@@ -3,9 +3,7 @@ package algorithm.baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.SortedSet;
-import java.util.StringTokenizer;
-import java.util.TreeSet;
+import java.util.*;
 
 public class StudyRoomDistancing {
     public static void main(String[] args) throws IOException {
@@ -18,16 +16,47 @@ public class StudyRoomDistancing {
         P = Integer.parseInt(st.nextToken());
 
 //        TreeSet<Integer> occupied = new TreeSet<>();
-//        SortedSet<Integer> occupied = new SortedSet<Integer>();
+//        ArrayList<Integer> occupied = new ArrayList<>();
+//        HashSet<Integer> occupied = new HashSet<>();
+
+        ArrayList<ArrayList<String>> reservedTime = new ArrayList<>();
+        for (int i = 0; i < T; i++) {
+            st = new StringTokenizer(br.readLine());
+            ArrayList<String> time = new ArrayList<>();
+            time.add(st.nextToken());
+            time.add(st.nextToken());
+            reservedTime.add(time);
+        }
     }
 
-    public int nextSeat(TreeSet<Integer> occupied, int n) {
-        int min = n;
-        for (int i = 1; i <= n; ++i) {
-            if(occupied.contains(i)) continue;
-            Integer lower = occupied.lower(i);
-            Integer higher = occupied.higher(i);
+    public static int nextSeat(HashSet<Integer> occupied, int n) {
+        if(occupied.isEmpty()) return 1;
+
+        ArrayList<Integer> occupiedList = new ArrayList<>(occupied);
+        Collections.sort(occupiedList);
+
+        int maxMin = 0;
+        int maxMinIdx = n;
+
+        for (int i = n; i >= 1; --i) {
+            if(minDistance(occupiedList, i) >= maxMin){
+//                System.out.println("i : " + i);
+                maxMin = minDistance(occupiedList, i);
+                maxMinIdx = i;
+            }
         }
+
+        return maxMinIdx;
+
+    }
+
+    public static int minDistance(ArrayList<Integer> lst, int i) {
+        int min = 100;
+        for (int j = 0; j < lst.size(); j++) {
+            if(Math.abs(lst.get(j) - i) < min)
+                min = Math.abs(lst.get(j) - i);
+        }
+        return min;
     }
 
     public class Time {
