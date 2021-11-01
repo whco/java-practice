@@ -37,7 +37,7 @@ public class SetExpression {
 
     public static int getParent(int n, int[] parent){
         if(parent[n] == n) return n;
-        return getParent(parent[n], parent);
+        return parent[n] = getParent(parent[n], parent);
     }
 
     public static int[] unionParent(int a, int b, int[] parent){
