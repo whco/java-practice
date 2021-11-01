@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 public class SetExpression {
     public static void main(String[] args) throws IOException {
+        StringBuffer sb = new StringBuffer();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -27,9 +28,11 @@ public class SetExpression {
                 parent = unionParent(a, b, parent);
             }
             else if(op[0].equals("1")){
-                System.out.println(getParent(a, parent) == getParent(b, parent) ? "YES" : "NO");
+                sb.append(getParent(a, parent) == getParent(b, parent) ? "YES" : "NO");
+                sb.append("\n");
             }
         }
+        System.out.println(sb);
     }
 
     public static int getParent(int n, int[] parent){
