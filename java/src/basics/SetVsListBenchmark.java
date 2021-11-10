@@ -2,13 +2,12 @@ package basics;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 public class SetVsListBenchmark {
 
     public static void main(String[] args) {
-        long size = (long)1e6;
+        long size = (long)1e8;
+        System.out.println("Element Count : " + size);
         long bt = System.nanoTime();
         ArrayList<Integer> al = new ArrayList<>();
         for (int i = 0; i < size; i++) {
@@ -35,4 +34,5 @@ public class SetVsListBenchmark {
         long at4 = System.nanoTime();
         System.out.println("HashSet contains : " + (at4 - bt4) / 1000000.0 + "ms");
     }
+
 }
