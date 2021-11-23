@@ -13,6 +13,11 @@ public class Test {
 //        System.out.println(str);
 
         int a = 0;
+        for (int i = 0; i < 0; i++) {
+            System.out.println("work");
+        }
+        boolean[] broken = new boolean[10];
+        System.out.println(broken[9]);
         double b = 0;
         System.out.println(a == b);
 //        int[] one = new int[3];
