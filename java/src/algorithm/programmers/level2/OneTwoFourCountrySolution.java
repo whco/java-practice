@@ -1,6 +1,6 @@
 package algorithm.programmers.level2;
 
-class Solution {
+class OneTwoFourCountrySolution {
     public String solution(int n) {
         char[] oneTwoFour = {'1', '2', '4'};
         StringBuffer sb = new StringBuffer();

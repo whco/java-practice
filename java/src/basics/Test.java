@@ -10,7 +10,8 @@ public class Test {
 //        Long.parseLong(new String(
 //                Long.toString(l).chars().map(i -> -i).sorted().map(i -> -i).toArray(), 0, Long.toString(l).length()
 //        ));
-//        System.out.println(str);
+//
+        String s = "0123456789";
 
         int a = 0;
         for (int i = 0; i < 0; i++) {
