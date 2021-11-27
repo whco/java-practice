@@ -1,6 +1,6 @@
 package basics.multiThread;
 
-public class ShareMemoryFaultExample {
+public class ShareMemoryExample {
     public static void main(String[] args) {
 
         Calculator calculator = new Calculator();
@@ -16,6 +16,9 @@ public class ShareMemoryFaultExample {
         // 공유 객체 설정
         user2.setCalculator(calculator);
         user2.start();
+        // setMemory에 synchronized 붙이기 전에는 같은 수, 후에는 각각 수
+
+
 
     }
 }
