@@ -8,7 +8,7 @@ public class KakaoFriendsColoringBookSolution {
     static boolean[][] checked;
     static int size = 0;
 
-    public void dfs(int[][] picture, int x, int y){
+    public static void dfs(int[][] picture, int x, int y){
         if(checked[x][y]) return;
         checked[x][y] = true;
         ++size;
@@ -23,6 +23,8 @@ public class KakaoFriendsColoringBookSolution {
     }
 
     public int[] solution(int m, int n, int[][] picture){
+        numberOfArea = 0;
+        maxSizeOfOneArea = 0;
         checked = new boolean[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
