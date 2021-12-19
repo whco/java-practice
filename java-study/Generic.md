@@ -36,18 +36,18 @@ String 타입도 지원하고싶고 Integer타입도 지원하고 싶고 많은 
 
 |타입|설명|
 |------|---|
-|<T>|Type|
-|<E>|Element|
-|<K>|Key|
-|<V>|Value|
-|<N>|Number|
+|<T >|Type|
+|<E >|Element|
+|<K >|Key|
+|<V >|Value|
+|<N >|Number|
   
 물론 반드시 한 글자일 필요는 없다. 또한 설명과 반드시 일치해야 할 필요도 없다. <br>
 예로들어 <Ele>라고 해도 전혀 무방하다. 다만 대중적으로 통하는 통상적인 선언이 가장 편하기 때문에 위와같은 암묵적(?)인 규칙이 있을 뿐이다.
 
 1. 클래스 및 인터페이스 선언
 ```java
-  public class ClassName <T> { ... }
+public class ClassName <T> { ... }
 public Interface InterfaceName <T> { ... }
 ```
   T 타입은 해당 블럭 { ... } 안에서까지 유효하다.
