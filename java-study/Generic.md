@@ -51,4 +51,30 @@ public class ClassName <T> { ... }
 public Interface InterfaceName <T> { ... }
 ```
   T 타입은 해당 블럭 { ... } 안에서까지 유효하다.
+2. 제네릭 클래스 작성
+```java
+ // 제네릭 클래스
+class ClassName<E> {
+	
+	private E element;	// 제네릭 타입 변수
+	
+	void set(E element) {	// 제네릭 파라미터 메소드
+		this.element = element;
+	}
+	
+	E get() {	// 제네릭 타입 반환 메소드
+		return element;
+	}
+	
+}
+```
+3. 사용
+```java
+ public class Main {
+	public static void main(String[] args) {
+		
+		ClassName<String> a = new ClassName<String>();
+  }
+ }
+```
 
