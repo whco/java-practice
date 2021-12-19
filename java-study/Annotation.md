@@ -3,6 +3,7 @@
 ### Annotation
 - 해석하면 '주석'
 - 인터페이스를 기반으로 한 문법
+- JEE 5부터 추가
 - 주석처럼 코드에 달아 클래스에 특별한 의미를 부여하거나 기능을 주입
 - 크게 세 가지 종류
   - built-in annotation : JDK 에 내장 ```ex) @Override```
