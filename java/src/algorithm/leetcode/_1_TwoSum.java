@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TwoSum {
+public class _1_TwoSum {
     public int[] twoSum(int[] nums, int target) {
         int[] answer = new int[2];
         List<Integer> numsList = Arrays.stream(nums).boxed().collect(Collectors.toList());
