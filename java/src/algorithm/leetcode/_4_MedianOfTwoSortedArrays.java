@@ -2,7 +2,7 @@ package algorithm.leetcode;
 
 public class _4_MedianOfTwoSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        //O(m + n) solution, need to be correctified
+        //O(m + n) solution, need to be corrected
         int len = nums1.length + nums2.length;
         int[] nums = new int[len];
         int i = 0, i1 = 0, i2 = 0;
