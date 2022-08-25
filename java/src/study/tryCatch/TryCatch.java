@@ -1,4 +1,4 @@
-package basics;
+package study.tryCatch;
 
 public class TryCatch {
     public static void main(String[] args) {
