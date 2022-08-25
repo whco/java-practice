@@ -1,4 +1,4 @@
-package basics.multiThread;
+package basics.multiThread.practice1;
 
 public class User2 extends Thread{
 

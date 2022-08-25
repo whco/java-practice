@@ -1,4 +1,4 @@
-package basics.multiThread;
+package basics.multiThread.practice1;
 
 public class CalcThread extends Thread{
     public CalcThread(String name) {
